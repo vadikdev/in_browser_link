@@ -1,14 +1,80 @@
 <html>
-  <head>
+<head>
     <title>Open link in browser</title>
-  </head>
-  <body>
-    <a href="intent://fridayplans.com#Intent;scheme=https;end">
-      Open in Browser
-    </a>
-    <br />
-    <a href="https://fridayplans.com">
-      Open in App
-    </a>
-  </body>
+    <script src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .btn {
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            color: #ebebeb;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: .5rem;
+            min-height: 2.625rem;
+            min-width: 6.625rem;
+            text-decoration: none;
+            font-size: .875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+            transition: opacity .3s ease;
+        }
+
+        .btn--lg {
+            font-size: 1.5rem;
+            min-width: 18.625rem;
+            min-height: 5.25rem;
+        }
+
+        .header__btn {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .btn:hover, .btn:focus, .btn:active {
+            text-decoration: none;
+            opacity: .9;
+        }
+
+        .btn__text {
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<a href="https://intake.fridayplans.com/v3/qualification/1" class="btn btn--lg header__btn btn--anim">
+    <svg width="298" height="84">
+        <use xlink:href="#header-btn"></use>
+    </svg>
+    <span class="btn__text">Get Started</span>
+</a>
+<svg class="svg-sprites">
+    <symbol id="header-btn" viewBox="0 0 298 84" fill="none">
+        <path d="M4.80829.0C2.22421.0.129395 2.09867.129395 4.6875V66.4334C.129395 67.6766.622347 68.8688 1.49981 69.7479L14.3553 82.6271C15.2328 83.5061 16.4229 84 17.6638 84H293.321C295.905 84 298 81.9013 298 79.3125V17.5666C298 16.3234 297.507 15.1311 296.629 14.2521L283.774 1.37294C282.896.49386 281.706.0 280.465.0H4.80829z"
+              fill="url(#paintHeaderBtnBorder)" fill-opacity=".2"></path>
+        <path d="M4.48624.0C2.00856.0.0 2.01472.0 4.5V55.136c0 1.1935.472654 2.3381 1.31399 3.182L13.6401 70.682C14.4815 71.5259 15.6226 72 16.8124 72H281.514C283.991 72 286 69.9853 286 67.5V16.864C286 15.6705 285.527 14.5259 284.686 13.682L272.36 1.31802C271.518.474106 270.377.0 269.188.0H4.48624z"
+              fill="url(#paintHeaderBtnBG)" transform="translate(6,6)"></path>
+        <defs>
+            <linearGradient id="paintHeaderBtnBorder" x1="-21.5" y1="-.590913e-4" x2="318.591" y2="83.6285"
+                            gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#9ff08b"></stop>
+                <stop offset="1" stop-color="#52b13b"></stop>
+            </linearGradient>
+            <linearGradient id="paintHeaderBtnBG" x1="-216.5" y1="-94.5001" x2="295.989" y2="97.5478"
+                            gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#9ff08b"></stop>
+                <stop offset="1" stop-color="#52b13b"></stop>
+            </linearGradient>
+        </defs>
+    </symbol>
+</svg>
+</body>
 </html>
