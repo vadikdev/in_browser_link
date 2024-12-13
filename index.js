@@ -11072,7 +11072,8 @@ if ((platform.type === "mobile" || platform.type === "tablet") && inApp.isInApp)
 
     if ('iOS' === OS) {
         let version = parseFloat(browser.getOS().version);
-        if (version < 17) {
+        console.log(version);
+        if (version >= 17) {
             $(document).ready(function() {
                 $('a').each(function() {
                     let href = $(this).attr('href');
